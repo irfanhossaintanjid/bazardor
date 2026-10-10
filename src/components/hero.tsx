@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import CurrentDate from "./CurrentDate";
 
 const Basket = () => (
   <svg
@@ -35,22 +38,15 @@ const Basket = () => (
 );
 
 const Hero = () => {
-  const date = new Date().toLocaleDateString("bn-BD", {
-    dateStyle: "full",
-    timeZone: "Asia/Dhaka",
-  });
-
   return (
     <section className="mx-auto max-w-6xl px-4 py-6">
       <div className="flex flex-col-reverse items-center gap-6 rounded-3xl border border-base-300 bg-[#fafcfa] px-6 py-8 sm:px-10 md:flex-row md:justify-between">
         {/* Text */}
         <div className="w-full md:max-w-xl">
-          <span
-            suppressHydrationWarning
+          <CurrentDate
             className="inline-block rounded-full bg-[#05893e]/10 px-3 py-1 text-xs font-semibold text-[#05893e]"
-          >
-            {date}
-          </span>
+            fallback="লোড হচ্ছে..."
+          />
 
           <h2 className="mt-3 text-3xl font-bold leading-tight text-[#1d271f] sm:text-4xl">
             আজকের বাজারের দাম এক নজরে
