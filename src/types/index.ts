@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+
 
 export type Unit = "kg" | "litre" | "dozen" | "piece";
 export type ChangeDir = "up" | "down" | "flat";
@@ -13,27 +13,27 @@ export interface navlinks {
 
 export type Product = {
   id: number;
-  slug: string;        // e.g. "ilish-mach"
+  slug: string;        
   nameBn: string;
-  category: string;    // e.g. "chal", "dim-dui"
+  category: string;    
   categoryNameBn: string;
   categoryIcon: string;
   unit: Unit;
-  image: string;       // emoji
+  image: string;       
   today: number;
   yesterday: number;
   lastWeek: number;
   lastMonth: number;
   change: {
     dir: ChangeDir;
-    pct: number;       // already negative when dir === "down"
+    pct: number;       
   };
   markets: Market[];
 };
 
 export type Market = {
-  market: string;      // e.g. "কারওয়ান বাজার"
-  division: string;    // e.g. "ঢাকা"
+  market: string;      
+  division: string;   
   min: number;
   max: number;
 };

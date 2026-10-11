@@ -2,7 +2,9 @@ import { Toaster } from "react-hot-toast";
 import type { Metadata } from "next";
 import { Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
+import { Suspense } from "react";
+import Marquee from "@/components/Marquee";
 
 
 
@@ -23,7 +25,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     className={`${notoSerifBengali.className} h-full antialiased`}>
       <body className="min-h-full bg-[#f5f8f6] text-slate-800">
     <Navbar/>
-       <main className="max-w-6xl mx-auto bg-[#e1e8e1]">{children}</main>
+     <Suspense
+  fallback={<div className="skeleton mx-auto my-3 h-11 w-full max-w-6xl" />}
+>
+  <Marquee />
+</Suspense>
+       <main className="max-w-6xl mx-auto">{children}</main>
         <Toaster
             position="top-right"
             toastOptions={{
