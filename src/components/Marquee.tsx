@@ -1,12 +1,21 @@
 
-import type { Product } from "@/types";
+import type { Product, Unit } from "@/types";
 import MarqueeText from "react-marquee-text"
 import "react-marquee-text/dist/styles.css"
 
 
 const formatBangla = (value: number) => {
   return value.toLocaleString("bn-BD");
-};
+}
+   const unitBn: Record<Unit, string> = {
+    kg: "কেজি",
+    litre: "লিটার",
+    dozen: "ডজন",
+    piece: "পিস",
+  };
+
+
+
 
 const Marquee = async () => {
 const res = await fetch("https://openapi.programming-hero.com/api/bazardor/products")
@@ -22,7 +31,7 @@ const data: Product[] = await res.json()
         <span key={h.id} className="inline-flex gap-2 px-4">
         <span>{h.image}</span>
           <span>{h.nameBn}</span>
-          <span>{formatBangla(h.today)} টাকা/{h.unit}</span>
+          <span>{formatBangla(h.today)} টাকা/{unitBn[h.unit]}</span>
           <span
             className={
               h.change.dir === "up"

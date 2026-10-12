@@ -3,6 +3,7 @@ import { TiShoppingCart } from "react-icons/ti";
 import BnDate from "./BnDate";
 import Navlinks from "./Navlinks";
 import { Suspense } from "react";
+import Userinfo from "./Userinfo";
 
 
 const Navbar = () => {
@@ -24,21 +25,7 @@ const Navbar = () => {
           </div>
         </Link>
 
-
-        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-          <Link
-            href="/signin"
-            className="btn btn-sm sm:btn-md rounded-lg border  border-[#05893e] bg-transparent px-3 font-semibold text-[#05893e] hover:bg-[#05893e]/30 sm:px-4"
-          >
-            সাইন ইন
-          </Link>
-          <Link
-            href="/signup"
-            className="btn btn-sm sm:btn-md rounded-lg border-0 bg-[#05893e] px-3 font-semibold text-white hover:bg-[#047f39] sm:px-4"
-          >
-            সাইন আপ
-          </Link>
-        </div>
+     <Userinfo/>
       </div>
 
       <Suspense

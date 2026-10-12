@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { authClient } from "@/lib/auth-client";
-// import SocialButtons from "@/components/SocialButtons";
+import SocialButtons from "@/components/SocialButtons";
 
 const inputCls =
   "input w-full rounded-lg border border-base-300 bg-[#fafcfa] focus:border-[#05893e] focus:outline-none";
@@ -14,10 +14,10 @@ export default function SignInPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
-    const email = String(fd.get("email")).trim();
+    const email = String(fd.get("email"));
     const password = String(fd.get("password"));
 
     if (!email || !password) return toast.error("ইমেইল ও পাসওয়ার্ড দিন");
@@ -61,7 +61,7 @@ export default function SignInPage() {
             </button>
           </form>
 
-          {/* <SocialButtons /> */}
+          <SocialButtons />
 
           <p className="mt-5 text-center text-sm text-base-content/70">
             অ্যাকাউন্ট নেই?{" "}

@@ -5,6 +5,7 @@ import BnDate from "./BnDate";
 
 const Hero = () => {
   return (
+    
     <section className="mx-auto mt-3 max-w-7xl px-4">
       <div className="grid grid-cols-1 md:flex min-h-[218px] items-center justify-between gap-6 overflow-hidden rounded-[20px] border border-[#e2ebe4] bg-[#f9fcf9] px-6 py-5 sm:px-8">
         {/* Hero Content */}
@@ -23,12 +24,12 @@ const Hero = () => {
             দামের পরিবর্তন এক জায়গায়।
           </p>
 
-          <a
-            href="#products"
-            className=" btn mt-5 inline-flex min-h-10 items-center justify-center rounded-lg border  px-5 py-2 text-sm font-bold transition bg-[#07843c] text-white"
-          >
-            বাজারদর দেখুন
-          </a>
+         <a
+  href="#products"
+  className="btn mt-5 inline-flex min-h-10 items-center justify-center rounded-lg border px-5 py-2 text-sm font-bold bg-[#07843c] text-white transition duration-300 hover:bg-[#066b32]"
+>
+  সব পণ্য দেখুন
+</a>
         </div>
 
     

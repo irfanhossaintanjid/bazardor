@@ -12,14 +12,23 @@ const ProductSection = async () => {
   const products: Product[] = await res.json();
 
   const increas = products.filter(
-    (p) => p.change.dir === "up"
+    p => p.change.dir === "up"
   );
-
+const increa = [...increas]
+  .sort((a, b) => b.change.pct - a.change.pct)
+  .slice(0, 6);
   const decreas = products.filter(
     (p) => p.change.dir === "down"
   );
+  const decrea = [...decreas]
+  .sort((a, b) => a.change.pct - b.change.pct  )
+  .slice(0, 6);
+
+ const bn = (n: number, digits = 0) =>
+  n.toLocaleString("bn-BD", { maximumFractionDigits: digits });
 
   return (
+    
     <section className=" space-y-8 px-4 py-6">
       
       <div>
@@ -29,7 +38,7 @@ const ProductSection = async () => {
         </h2>
 
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 ">
-          {increas.map((product) => (
+          {increa.map((product) => (
             <ProductCard
               key={product.id}
               product={product}
@@ -46,7 +55,7 @@ const ProductSection = async () => {
         </h2>
 
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 ">
-          {decreas.map((product) => (
+          {decrea.map((product) => (
             <ProductCard
               key={product.id}
               product={product}
@@ -56,13 +65,13 @@ const ProductSection = async () => {
       </div>
 
       
-      <div id="products">
+      <div id="products" className="scroll-mt-20">
         <h2 className="mb-1 text-base font-extrabold text-gray-900">
           সব পণ্য
         </h2>
 
         <p className="mb-3 text-xs text-gray-500">
-          নিত্যপ্রয়োজনীয় পণ্যের বর্তমান বাজারদর
+          মোট {bn(products.length)}টি পণ্য দেখানো হচ্ছে
         </p>
 
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 ">

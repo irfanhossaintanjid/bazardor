@@ -20,9 +20,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="bn"
+    <html  lang="bn"
     data-theme='light'
-    className={`${notoSerifBengali.className} h-full antialiased`}>
+    
+    className={` scroll-smooth ${notoSerifBengali.className} h-full antialiased`}>
       <body className="min-h-full bg-[#f5f8f6] text-slate-800">
     <Navbar/>
      <Suspense

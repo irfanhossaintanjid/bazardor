@@ -6,10 +6,11 @@ import React, { Suspense } from 'react';
 const page = () => {
   return (
     <div>
-      <Hero/>
        <Suspense
           fallback={<div className="skeleton mx-auto my-2 h-8 w-full max-w-6xl" />}
         >
+      <Hero/>
+      
           <ProductSection />
         </Suspense>
       

@@ -17,7 +17,7 @@ const BnDate = ({ className }: { className?: string }) => {
     );
   }, []);
 
-  return <span className={className}>{date || "\u00A0"}</span>;
+  return <span className={className}>{date}</span>;
 };
 
 export default BnDate;

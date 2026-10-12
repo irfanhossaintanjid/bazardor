@@ -1,20 +1,33 @@
 
-import type { Product } from "@/types";
+import type { Product, Unit } from "@/types";
+import Link from "next/link";
 // import Link from "next/link";
 
 type Props = {
   product: Product;
 };
 
+
 const formatBangla = (value: number) =>
   value.toLocaleString("bn-BD");
-
+ const unitBn: Record<Unit, string> = {
+  kg: "কেজি",
+  litre: "লিটার",
+  dozen: "ডজন",
+  piece: "পিস",
+};
 const ProductCard = ({ product }: Props) => {
   const isUp = product.change.dir === "up";
 
   return (
-    // <Link >
-    <div className="rounded-xl border border-gray-100 bg-white p-3 transition hover:shadow-md">
+    <Link
+  href={`/product/${product.id}`}
+  
+>
+
+  
+    
+    <div className="rounded-xl border border-gray-100 bg-white p-3 transition hover:border-[#09c95c] hover:shadow-md">
       <div className="flex items-center gap-2">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#f1f6ef] text-xl">
           {product.categoryIcon}
@@ -26,7 +39,7 @@ const ProductCard = ({ product }: Props) => {
           </h3>
 
           <p className="text-xs text-gray-400">
-            প্রতি {product.unit}
+            প্রতি {unitBn[product.unit]}
           </p>
         </div>
       </div>
@@ -54,7 +67,7 @@ const ProductCard = ({ product }: Props) => {
         </span>
       </div>
     </div>
-    // </Link>
+    </Link>
   );
 };
 

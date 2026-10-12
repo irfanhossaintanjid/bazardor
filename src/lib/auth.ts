@@ -7,8 +7,16 @@ const db = client.db("bazardor");
 
 export const auth = betterAuth({
     emailAndPassword:{
-        enabled:true
+        enabled:true,
+        autoSignIn: false,
     },
+
+     socialProviders: {
+        google: { 
+            clientId: process.env.GOOGLE_CLIENT_ID as string, 
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET as string, 
+        }, 
+      },
   database: mongodbAdapter(db, {
     client,
   }),
