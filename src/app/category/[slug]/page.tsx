@@ -33,7 +33,7 @@ async function CategoryContent({ params }: Props) {
   return (
     <CategoryPageContent
       category={slug}
-      categoryName={categoryNames[slug] ?? "পণ্য"}
+      categoryName={categoryNames[slug] }
       categoryIcon={categoryIcons[slug]}
     />
   );

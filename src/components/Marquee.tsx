@@ -1,5 +1,6 @@
 
 import type { Product, Unit } from "@/types";
+import Link from "next/link";
 import MarqueeText from "react-marquee-text"
 import "react-marquee-text/dist/styles.css"
 
@@ -25,10 +26,11 @@ const res = await fetch("https://openapi.programming-hero.com/api/bazardor/produ
 const data: Product[] = await res.json()
 
     return (
-        <MarqueeText direction="right" duration={8}>
+        <MarqueeText direction="right" duration={12}>
+          
        <div className="overflow-hidden whitespace-nowrap border py-[4px] border-gray-300 bg-[#fafcfa] ">
       {data.map((h) => (
-        <span key={h.id} className="inline-flex gap-2 px-4">
+        <Link href={`/product/${h.id}`} key={h.id} className="inline-flex gap-2 px-4 rounded-xl hover:bg-[#b8f8c5] border-green-500">
         <span>{h.image}</span>
           <span>{h.nameBn}</span>
           <span>{formatBangla(h.today)} টাকা/{unitBn[h.unit]}</span>
@@ -41,7 +43,7 @@ const data: Product[] = await res.json()
           >
             {h.change.dir === "up" ? "▲" : "▼"} {formatBangla(h.change.pct)}%
           </span>
-        </span>
+        </Link>
       ))}
     </div>
     </MarqueeText>

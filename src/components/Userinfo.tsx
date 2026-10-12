@@ -37,21 +37,21 @@ const Userinfo = () => {
           <button
             type="button"
             tabIndex={0}
-            className="flex items-center gap-2 rounded-full p-1 transition hover:bg-[#9bed9b]"
+            className="flex items-center gap-2 rounded-full p-1 transition hover:bg-[#b8f8c5]"
           >
             <div className="avatar">
               <div className="relative size-10 overflow-hidden rounded-full ring-2 ring-[#05893e] ring-offset-2">
                 {user.image ? (
                   <Image
                     src={user.image}
-                    alt={user.name || "User"}
+                    alt={user.name}
                     fill
                     sizes="40px"
                     className="object-cover"
                   />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center bg-green-100 font-bold text-[#05893e]">
-                    {user.name?.charAt(0).toUpperCase() || "U"}
+                    {user?.name}
                   </div>
                 )}
               </div>

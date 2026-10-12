@@ -30,7 +30,7 @@ const ProductCard = ({ product }: Props) => {
     <div className="rounded-xl border border-gray-100 bg-white p-3 transition hover:border-[#09c95c] hover:shadow-md">
       <div className="flex items-center gap-2">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#f1f6ef] text-xl">
-          {product.categoryIcon}
+          {product.image}
         </div>
 
         <div className="min-w-0 flex-1">

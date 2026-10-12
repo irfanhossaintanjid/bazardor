@@ -5,6 +5,7 @@ type Props = {
   category: string;
   categoryName: string;
   categoryIcon: string;
+  
 };
 
 const CategoryPage = async ({
@@ -26,7 +27,7 @@ const CategoryPage = async ({
     <section className="mx-auto max-w-6xl px-4 py-6">
       <div className="mb-4 flex items-center gap-3 rounded-xl border border-gray-200 bg-white p-5">
         <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gray-100 text-2xl">
-          {categoryIcon}
+          {categoryIcon} 
         </div>
 
         <div>

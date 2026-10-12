@@ -26,16 +26,16 @@ const SocialButtons = () => {
         <button
           type="button"
           onClick={() => handlesocial("google")}
-          className="btn btn-sm sm:btn-md rounded-lg border border-base-300 bg-[#fafcfa]"
+          className="btn btn-sm sm:btn-md rounded-lg font-bold border border-base-300 bg-[#fafcfa]"
         >
-          <FcGoogle className="h-5 w-5" /> Google দিয়ে চালিয়ে যান
+          <FcGoogle className="h-5 w-5" /> google দিয়ে চালিয়ে যান
         </button>
         <button
           type="button"
           onClick={() => handlesocial("github")}
-          className="btn btn-sm sm:btn-md rounded-lg border border-base-300 bg-[#fafcfa]"
+          className="btn btn-sm sm:btn-md rounded-lg font-bold border border-base-300 bg-[#fafcfa]"
         >
-          <FaGithub className="h-5 w-5" /> GitHub দিয়ে চালিয়ে যান
+          <FaGithub className="h-5 w-5" /> github দিয়ে চালিয়ে যান
         </button>
       </div>
     </>
