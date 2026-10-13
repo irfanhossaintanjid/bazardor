@@ -1,5 +1,5 @@
 
-import Hero from '@/components/Hero';
+import HeroBanner from '@/components/HeroBanner';
 import ProductSection from '@/components/ProductSections';
 import React, { Suspense } from 'react';
 
@@ -12,7 +12,7 @@ const page = () => {
     <span className="loading loading-spinner w-16 text-[#05893e]" />
   </div>}
         >
-      <Hero/>
+      <HeroBanner/>
       
           <ProductSection />
         </Suspense>

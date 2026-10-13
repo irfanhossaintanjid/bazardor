@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import BnDate from "./BnDate";
 
-const Hero  = () => {
+const HeroBanner  = () => {
   return (
     
     <section className="mx-auto mt-3 max-w-7xl px-4">
@@ -48,4 +48,4 @@ const Hero  = () => {
   );
 };
 
-export default Hero;
+export default HeroBanner;
