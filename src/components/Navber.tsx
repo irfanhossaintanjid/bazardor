@@ -6,7 +6,7 @@ import { Suspense } from "react";
 import Userinfo from "./Userinfo";
 
 
-const Navbar = () => {
+const Navber = () => {
   return (
     <header className="bg-[#fafcfa] sticky top-0 z-50 w-full border-b border-base-300 ">
       <div className="max-w-6xl mx-auto flex items-center justify-between gap-3 px-4 py-2">
@@ -39,4 +39,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navber;

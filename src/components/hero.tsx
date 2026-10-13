@@ -3,12 +3,12 @@ import Image from "next/image";
 
 import BnDate from "./BnDate";
 
-const Hero = () => {
+const Hero  = () => {
   return (
     
     <section className="mx-auto mt-3 max-w-7xl px-4">
       <div className="grid grid-cols-1 md:flex min-h-[218px] items-center justify-between gap-6 overflow-hidden rounded-[20px] border border-[#e2ebe4] bg-[#f9fcf9] px-6 py-5 sm:px-8">
-        {/* Hero Content */}
+        {/* Hero  Content */}
         <div className="max-w-xl">
           <span className="inline-block rounded-full bg-[#c9f5d7] px-3 py-1 text-xs font-semibold text-[#07843c]">
             <BnDate/>

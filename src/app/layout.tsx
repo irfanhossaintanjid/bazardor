@@ -5,7 +5,8 @@ import "./globals.css";
 
 import { Suspense } from "react";
 import Marquee from "@/components/Marquee";
-import Navbar from "@/components/Navbar";
+import Navber from "@/components/Navber";
+
 
 
 
@@ -26,7 +27,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     
     className={` scroll-smooth ${notoSerifBengali.className} h-full antialiased`}>
       <body className="min-h-full bg-[#f5f8f6] text-slate-800">
-    <Navbar/>
+    <Navber/>
      <Suspense
   fallback={<div className="skeleton mx-auto my-3 h-11 w-full max-w-6xl" />}
 >
