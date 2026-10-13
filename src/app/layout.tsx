@@ -6,6 +6,7 @@ import "./globals.css";
 import { Suspense } from "react";
 import Marquee from "@/components/Marquee";
 import Navber from "@/components/Navber";
+import Footer from "@/components/Footer";
 
 
 
@@ -34,6 +35,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   <Marquee />
 </Suspense>
        <main className="max-w-6xl mx-auto">{children}</main>
+
+       <Footer/>
         <Toaster
             position="top-right"
             toastOptions={{
