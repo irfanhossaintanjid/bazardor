@@ -56,11 +56,7 @@ export default function ProductPage({ params }: Props) {
     <Suspense
       fallback={
         <main className="min-h-screen bg-[#f0f5f1] px-4 py-8">
-          <div className="mx-auto max-w-6xl animate-pulse rounded-2xl bg-white p-8">
-            <p className="text-slate-500">
-              পণ্যের তথ্য লোড হচ্ছে...
-            </p>
-          </div>
+         <span className="loading loading-spinner w-10 text-[#05893e]" />
         </main>
       }
     >

@@ -42,11 +42,10 @@ async function CategoryContent({ params }: Props) {
 export default function CategoryPage({ params }: Props) {
   return (
     <Suspense
-      fallback={
-        <div className="mx-auto max-w-6xl px-4 py-10 text-center">
-          পণ্যের তথ্য লোড হচ্ছে...
-        </div>
-      }
+     fallback={
+  <div className=" skeleton mx-auto flex h-52 max-w-6xl items-center justify-center">
+    <span className="loading loading-spinner w-16 text-[#05893e]" />
+  </div>}
     >
       <CategoryContent params={params} />
     </Suspense>

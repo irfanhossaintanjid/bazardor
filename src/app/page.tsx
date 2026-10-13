@@ -7,7 +7,10 @@ const page = () => {
   return (
     <div>
        <Suspense
-          fallback={<div className="skeleton mx-auto my-2 h-8 w-full max-w-6xl" />}
+          fallback={
+  <div className=" skeleton mx-auto flex h-52 max-w-6xl items-center justify-center">
+    <span className="loading loading-spinner w-16 text-[#05893e]" />
+  </div>}
         >
       <Hero/>
       
