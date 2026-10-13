@@ -7,8 +7,7 @@ import toast from "react-hot-toast";
 import { authClient } from "@/lib/auth-client";
 import SocialButtons from "@/components/SocialButtons";
 
-const inputCls =
-  "input w-full rounded-lg border border-base-300 bg-[#fafcfa] focus:border-[#05893e] focus:outline-none";
+
 
 export default function SignInPage() {
   const router = useRouter();
@@ -30,7 +29,7 @@ export default function SignInPage() {
 
     toast.success("সফলভাবে সাইন ইন হয়েছে");
     router.push("/");
-    router.refresh();
+    
   };
 
   return (
@@ -45,11 +44,11 @@ export default function SignInPage() {
           <form onSubmit={onSubmit} className="space-y-4" noValidate>
             <div>
               <label htmlFor="email" className="mb-1 block text-sm font-medium">ইমেইল</label>
-              <input id="email" name="email" type="email" autoComplete="email" className={inputCls} />
+              <input id="email" name="email" type="email" autoComplete="email" className="input w-full rounded-lg border border-base-300 bg-[#fafcfa] focus:border-[#05893e] focus:outline-none" />
             </div>
             <div>
               <label htmlFor="password" className="mb-1 block text-sm font-medium">পাসওয়ার্ড</label>
-              <input id="password" name="password" type="password" autoComplete="current-password" className={inputCls} />
+              <input id="password" name="password" type="password" autoComplete="current-password" className="input w-full rounded-lg border border-base-300 bg-[#fafcfa] focus:border-[#05893e] focus:outline-none" />
             </div>
 
             <button

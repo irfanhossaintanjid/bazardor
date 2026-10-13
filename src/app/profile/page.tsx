@@ -27,7 +27,7 @@ export default function ProfilePage() {
       const { error } = await authClient.updateUser({ name });
 
       if (error) {
-        toast.error(error.message || "নাম আপডেট করা যায়নি");
+        toast.error("নাম আপডেট করা যায়নি");
         return;
       }
 

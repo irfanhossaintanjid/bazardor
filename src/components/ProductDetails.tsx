@@ -122,7 +122,7 @@ export default function ProductDetails({ product }: Props) {
           <PriceCard
             title="গড় বাজারদর"
             price={averagePrice}
-            dis="প্রতি কেজি এর হিসাব"
+            dis= {`প্রতি ${unitBn[product.unit]} এর হিসাব`}
             color="green"
           />
         </div>

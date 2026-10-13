@@ -2,9 +2,10 @@ import { Toaster } from "react-hot-toast";
 import type { Metadata } from "next";
 import { Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+
 import { Suspense } from "react";
 import Marquee from "@/components/Marquee";
+import Navbar from "@/components/Navbar";
 
 
 
