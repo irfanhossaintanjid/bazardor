@@ -54,11 +54,10 @@ async function ProductContent({ params }: Props) {
 export default function ProductPage({ params }: Props) {
   return (
     <Suspense
-      fallback={
-        <main className="min-h-screen bg-[#f0f5f1] px-4 py-8">
-         <span className="loading loading-spinner w-10 text-[#05893e]" />
-        </main>
-      }
+     fallback={
+  <div className=" skeleton mx-auto flex h-52 max-w-6xl items-center justify-center">
+    <span className="loading loading-spinner w-16 text-[#05893e]" />
+  </div>}
     >
       <ProductContent params={params} />
     </Suspense>

@@ -81,7 +81,7 @@ const Userinfo = () => {
 
             <li>
               <Link
-                href="/profile/edit"
+                href="/profile"
                 className="flex items-center gap-3"
               >
                 <FiUser size={18} />

@@ -44,9 +44,10 @@ export default function ProfilePage() {
 
   if (isPending) {
     return (
-      <div className="flex min-h-60 items-center justify-center">
-        <span className="loading loading-spinner loading-lg" />
-      </div>
+       
+  <div className=" skeleton mx-auto flex h-52 max-w-6xl items-center justify-center">
+    <span className="loading loading-spinner w-16 text-[#05893e]" />
+  </div>
     );
   }
 
@@ -61,7 +62,7 @@ export default function ProfilePage() {
           আপনার অ্যাকাউন্টের তথ্য এখানে দেখুন।
         </p>
 
-        {/* Profile information */}
+    
         <section className="mt-6 flex flex-col items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white/70 p-6 sm:flex-row">
           <div className="flex items-center gap-4">
             <div className="avatar">
@@ -103,7 +104,7 @@ export default function ProfilePage() {
           </button>
         </section>
 
-        {/* Edit name only */}
+        
         <section className="mt-6 rounded-2xl border border-gray-200 bg-white/70 p-6 sm:p-8">
           <h2 className="mb-6 text-lg font-semibold text-gray-900">
             তথ্য

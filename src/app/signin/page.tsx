@@ -32,6 +32,15 @@ export default function SignInPage() {
     
   };
 
+   if (loading) {
+    return (
+       
+  <div className=" skeleton mx-auto flex h-52 max-w-6xl items-center justify-center">
+    <span className="loading loading-spinner w-16 text-[#05893e]" />
+  </div>
+    );
+  }
+
   return (
     <main className="min-h-[calc(100vh-8rem)] bg-[#f0f5f0] px-4 py-10">
       <div className="mx-auto w-full max-w-md">
